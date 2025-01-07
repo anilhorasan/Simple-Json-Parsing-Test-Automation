@@ -8,7 +8,7 @@ package com.anilhorasan;
  *
  * This class serves as a simple entry point for demonstrating JSON parsing with multiple libraries.
  * It takes a sample JSON string, parses it using each of the three libraries, and prints the results to the console.
- * 
+ *
  * The purpose of this class is to provide examples of parsing JSON data in a way that can be reused in test automation
  * frameworks, helping developers and testers choose the appropriate library for their needs and see how parsing is done.
  */

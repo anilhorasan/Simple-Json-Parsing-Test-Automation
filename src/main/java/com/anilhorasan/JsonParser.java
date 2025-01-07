@@ -1,11 +1,12 @@
 package com.anilhorasan;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
 import org.json.JSONObject;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+
 public class JsonParser {
-    
+
     // Parse JSON string to Java object using Jackson
     public static <T> T parseWithJackson(String jsonString, Class<T> clazz) throws Exception {
         ObjectMapper mapper = new ObjectMapper();

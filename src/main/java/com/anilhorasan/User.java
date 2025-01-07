@@ -7,8 +7,8 @@ package com.anilhorasan;
  * - email (String)
  * - age (int)
  *
- * It provides constructors for creating a user with or without initial values, 
- * getters and setters for each field, and a toString method to display the user's 
+ * It provides constructors for creating a user with or without initial values,
+ * getters and setters for each field, and a toString method to display the user's
  * information in a readable format.
  *
  * This class is used in various tests to parse JSON data into User objects

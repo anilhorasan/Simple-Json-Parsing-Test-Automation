@@ -2,7 +2,41 @@
 
 This repository demonstrates how to parse JSON data using various libraries within Java-based test automation frameworks.
 
-## Simple JSON Object Example
+
+## Folder Structure
+
+```
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── com/
+│   │           └── anilhorasan/
+│   │               ├── JsonParser.java
+│   │               ├── Main.java
+│   │               └── User.java
+│   └── test/
+│       ├── java/
+│       │   └── com/
+│       │       └── anilhorasan/
+│       │           ├── Gson_DataExtractionExampleTest.java
+│       │           ├── Jackson_DataExtractionExampleTest.java
+│       │           ├── JsonParserTest.java
+│       │           ├── OrgJson_DataExtractionExampleTest.java
+│       │           └── RestAssured_JsonPath_DataExtractionExampleTest.java
+│       └── resources/
+│           ├── dashboardCourses.json
+│           └── exampleData_1.json
+├── pom.xml
+├── README.md
+├── test.xml
+```
+
+
+## Simple JSON Object Examples
+
+### Data 1: 
+
+This JSON is used in JsonParserTest.java
 
 ```json
 {
@@ -12,11 +46,19 @@ This repository demonstrates how to parse JSON data using various libraries with
 }
 ```
 
-This simple JSON object represents a user with the following attributes:
+### Data 2: 
+This JSON is used in all other tests except **JsonParserTest.java**.
+```json
+{
+  "dashboard": {"purchaseAmount": 910, "website": "amazon.com"},
+  "courses": [
+    {"title": "Selenium Java", "price": 50, "copies":  6},
+    {"title": "Cypress"      , "price": 40, "copies":  4},
+    {"title": "RPA"          , "price": 45, "copies": 10}
+  ]
+}
+```
 
-- **name**: The user's name.
-- **email**: The user's email address.
-- **age**: The user's age.
 
 ## Libraries
 
@@ -29,10 +71,13 @@ Gson is another popular library for converting Java objects to JSON and vice ver
 ### org.json
 org.json is a lightweight library for working with JSON in Java. It provides a simple and flexible API for parsing and generating JSON.
 
+### Rest Assured JsonPath
+Rest Assured JsonPath is a powerful feature provided by the Rest Assured library for extracting and validating JSON data from REST API responses. It allows you to use JsonPath expressions to navigate and extract specific elements from JSON documents in a concise and readable manner.
+
 ## Features
 
 - Examples using Jackson, Gson, and org.json
-- Unit tests for each parsing method
+- Unit tests for each parsing method using JUnit and TestNG
 - Sample JSON files for testing
 
 ## Getting Started
@@ -61,20 +106,26 @@ org.json is a lightweight library for working with JSON in Java. It provides a s
     mvn clean install
     ```
 
- ### Usage
+### Usage
 * To run the unit tests:
-
     ```bash
     mvn test
     ```
 
-* To add your own JSON parsing examples, create a new class in 
-
-    ```src/main/java/com/anilhorasan/.```
+* To add your own JSON parsing examples, create a new class in:
+    ```bash
+    src/main/java/com/anilhorasan/
+    ```
 
 ## Contributing
 
 Contributions are welcome!
+
+### Steps to Contribute:
+1. Fork the repository
+2. Create a new branch
+3. Implement your changes
+4. Open a pull request
 
 
 ## Sources
@@ -82,5 +133,6 @@ Contributions are welcome!
 - [Jackson GitHub Repository](https://github.com/FasterXML/jackson)
 - [Gson GitHub Repository](https://github.com/google/gson)
 - [org.json GitHub Repository](https://github.com/stleary/JSON-java)
+- [Rest Assured - JSONPath GitHub Repository](https://github.com/rest-assured/rest-assured/tree/master/json-path)
 
 ---
