@@ -34,7 +34,7 @@ class JsonParserTest {
     @Test
     void testParseWithJackson() {
         try {
-            String jsonString = getJsonData();
+            String jsonString = getJsonData(); // Fetch the JSON string
             User user = JsonParser.parseWithJackson(jsonString, User.class);
             assertNotNull(user, "Jackson couldn't parse the JSON? Unbelievable!");
             assertEquals("John Doe", user.getName(), "Jackson, you had one job: get the name right.");
@@ -50,8 +50,8 @@ class JsonParserTest {
     @Test
     void testParseWithGson()  {
         try {
-            String jsonString = getJsonData();
-            User user = JsonParser.parseWithGson(jsonString, User.class);
+            String jsonString = getJsonData(); // Fetch the JSON string
+            User user = JsonParser.parseWithGson(jsonString, User.class); // Use Gson to parse the JSON
             assertNotNull(user, "Gson failed to parse the JSON? That’s just sad.");
             assertEquals("John Doe", user.getName(), "Gson, I thought you were smarter than this!");
             assertEquals("john.doe@example.com", user.getEmail(), "Gson, really? This email is as clear as day.");
@@ -64,8 +64,9 @@ class JsonParserTest {
     @Test
     void testParseWithOrgJson() {
         try {
-            String jsonString = getJsonData();
-            JSONObject jsonObject = JsonParser.parseWithOrgJson(jsonString);
+            String jsonString = getJsonData();  // Fetch the JSON string
+            JSONObject jsonObject = JsonParser.parseWithOrgJson(jsonString); // Use org.json to parse the JSON
+            // Assertions to verify the extracted data
             assertNotNull(jsonObject, "org.json can't even handle this simple JSON?");
             assertEquals("John Doe", jsonObject.getString("name"), "org.json, I expect better from you.");
             assertEquals("john.doe@example.com", jsonObject.getString("email"), "Are you sure this is the correct email?");
@@ -78,17 +79,8 @@ class JsonParserTest {
     @Test
     void testParseWithRestAssured() {
         try {
-            // Fetch the JSON string
-            String jsonString = getJsonData();
-
-            // Use Rest Assured's JsonPath to parse the JSON
-            JsonPath jsonPath = new JsonPath(jsonString);
-
-            // Extract data using JsonPath
-            String name = jsonPath.getString("name");
-            String email = jsonPath.getString("email");
-            int age = jsonPath.getInt("age");
-
+            String jsonString = getJsonData();  // Fetch the JSON string
+            JsonPath jsonPath = new JsonPath(jsonString);  // Use Rest Assured's JsonPath to parse the JSON
             // Assertions to verify the extracted data
             assertNotNull(jsonPath, "json should not be null.");
             assertEquals("John Doe", jsonPath.getString("name"), "Rest Assured, you had one job: get the name right.");
@@ -104,6 +96,7 @@ class JsonParserTest {
     @Test
     void testInvalidJsonWithJackson() {
         // Invalid JSON string to test error handling
+    	// This test utilizes src/main/java/com/anilhorasan/User.java
         String invalidJson = "{\"name\":\"John Doe\", \"email\":\"john.doe@example.com\", \"age\":}";
         try {
             JsonParser.parseWithJackson(invalidJson, User.class);
