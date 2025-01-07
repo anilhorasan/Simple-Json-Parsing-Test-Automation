@@ -135,4 +135,10 @@ Contributions are welcome!
 - [org.json GitHub Repository](https://github.com/stleary/JSON-java)
 - [Rest Assured - JSONPath GitHub Repository](https://github.com/rest-assured/rest-assured/tree/master/json-path)
 
+### Additional Sources About JSON:
+
+- [A curated list of awesome JSON libraries and resources.](https://github.com/burningtree/awesome-json?tab=readme-ov-file)
+- [A tool to quickly parse JSON into Java maps and lists.](https://github.com/mitchhentges/json-parse)
+- [Jayway JsonPath - A Java DSL for reading JSON documents.](https://github.com/json-path/JsonPath)
+
 ---

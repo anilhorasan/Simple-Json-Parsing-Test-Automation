@@ -1,0 +1,5 @@
+com\anilhorasan\RestAssured_JsonPath_DataExtractionExampleTest.class
+com\anilhorasan\JsonParserTest.class
+com\anilhorasan\OrgJson_DataExtractionExampleTest.class
+com\anilhorasan\Jackson_DataExtractionExampleTest.class
+com\anilhorasan\Gson_DataExtractionExampleTest.class

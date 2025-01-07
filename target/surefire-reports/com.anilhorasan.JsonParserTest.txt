@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.anilhorasan.JsonParserTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.252 s <<< FAILURE! -- in com.anilhorasan.JsonParserTest
+com.anilhorasan.JsonParserTest.testInvalidJsonWithJackson -- Time elapsed: 0.228 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Oops, Jackson didn't even break a sweat. Something's wrong! ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at com.anilhorasan.JsonParserTest.testInvalidJsonWithJackson(JsonParserTest.java:113)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
